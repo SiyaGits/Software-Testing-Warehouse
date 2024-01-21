@@ -1,0 +1,29 @@
+1. CONNECT TO SQL SERVER ******************************************** *
+- Encoding part (if any) related to jdbc.jar in later versions (ver. 10.x and above)
+
+String dbURL = "jdbc:sqlserver://TRUONG-LANG\\SQLEXPRESS;databaseName=Bookstore;encrypt=true;trustServerCertificate=true;";  //okie
+String dbURL = "jdbc:sqlserver://TRUONG-LANG;databaseName=Bookstore;encrypt=true;trustServerCertificate=true;";  //okie
+String dbURL = "jdbc:sqlserver://TRUONG-LANG:1433;databaseName=Bookstore;encrypt=true;trustServerCertificate=true;";  //okie
+String dbURL = "jdbc:sqlserver://TRUONG-LANG\\SQLEXPRESS;databaseName=Bookstore;encrypt=false;";  //okie
+String dbURL = "jdbc:sqlserver://localhost;databaseName=Bookstore;encrypt=true;trustServerCertificate=true";  //okie
+String dbURL = "jdbc:sqlserver://localhost:1433;databaseName=Bookstore;encrypt=true;trustServerCertificate=true";  //okie
+String dbURL = "jdbc:sqlserver://localhost;databaseName=Bookstore;encrypt=false";  //okie
+
+2. TOMCAT CONFIGURATION ********************************************
+
+> CATALINA_home/conf/tomcat-users.xml
+> 
+    <role rolename="manager"/>
+    <role rolename="admin"/>
+    <role rolename="manager-gui"/>
+    <role rolename="manager-script"/>
+    <role rolename="manager-jmx"/>
+    <role rolename="manager-status"/>
+    <user username="sa" password="sa123456" roles="manager,admin,manager-gui,manager-script,manager-jmx,manager-status" />
+
+> CATALINA_home/conf/server.xml
+>
+ <Connector port="6969" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+               redirectPort="8443" />
+

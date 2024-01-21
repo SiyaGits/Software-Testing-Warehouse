@@ -1,0 +1,174 @@
+GITHUB SOLUTION - GITHUB FOR BEGINER
+
+To play with GH we need to do the following:
+1. NEED 1 ACCOUNT ON GITHUB/GITLAB/BITBUCKET
+   - account includes: email; pass; your-git-hub-name - is part of the URL
+   - use personal email;
+   - GH's name is easy to call, easy to read, and written in lowercase letters
+
+2. DOWNLOAD TOOL TO YOUR COMPUTER TO TYPE COMMAND TO SYNC CODE ON GH SERVER
+   - Download tool at: https://git-scm.com/downloads (What is SCM???)
+   - when installing, remember
+       - tick 3 checkboxes (Desktop, Explorer...)
+       - select main repository, instead of defaulting to master
+   - After installation, GitBash will be located on the desktop, and on the right mouse button!!!
+     Use the right mouse button to quickly enter the git command in your project
+
+3. CREATE 1 EMPTY PROJECT ON SERVER - 1 EMPTY REpository ON SERVER - EMPTY REPOSITORY
+   - The warehouse name is 100% the same name (lower case) as the Project name in Local
+     I will sync it up!!!
+   - Do not select any options in the new warehouse creation screen, just select only one
+     most public/private
+   - the path pointing to the repository name will be:
+
+        https://your-gh-name/repository-name.git
+
+     This link is given to friends to download the source
+     This link allows you to sync the code yourself
+     This link is for team members to contribute/sync my code
+     he's on a group project!!!
+
+4. CREATE A PROJECT ON LOCAL DEVICE - YOUR DEVICE
+   - The project name is 100% identical to the remote repository name on GH which I will confirm
+     be synchronized
+   - feel free to add source, anything to this folder/project
+   - choose project type as Ant, Maven, .NET, JS all the same
+
+   - create 2 important configuration files. It's not mandatory, BUT ANYONE CAN DO IT!!!
+       
+        * .gitignore: text file used to list which folders and files
+                      The project cannot be synchronized - upload to the server!!!
+                      Without this file, the entire project folder is uploaded to the server
+                      target\ build\ dist\ what to do???
+                      To quickly and accurately create this file; let's go in
+                      gitignore.io, declares the IDE in use, project type
+                      are using, and press the generate button to get the text content
+                      copy & paste into notepad and save as .gitignore
+                      PUT INTO PROJECT, PROJECT LOCAL FOLDER
+         * README.md: is the text file that plays the index.html page
+                      owner of a warehouse. Used to advertise the above warehouse
+                      server. server. This file uses the "lightweight HTML" syntax.
+                      # ~ <h1>,
+                      * ~ <ul> <li>
+                      ![]() ~ <img alt= src=>
+
+                     This syntax is a note/markup language
+                      Similar to HTML (markup language)
+                      name is: MarkDown, Google "what is markdown" "syntax
+                      markdown" learn the tags to make the README.md file beautiful
+
+                      PUT MORE MEDALS, BADGE FOR COOL!!!
+                      PROJECT MUST MEET SOME STANDARDS TO BE GRANT
+                      MEDAL TO ATTACH TO README!!!
+
+5. COMMAND GROUP 1 - COMMAND GROUP USE ONLY 1 TIME FOR 1 DEVICE
+                 ONLY TYPE AGAIN IF RESETTING WIN
+                 ONLY TYPE AGAIN IF CHANGING INFO ACCOUNT
+                 ONLY TYPE IF YOU BORROWED YOUR DEVICE TO SYNC THE CODE, YOU HAVEN'T INSTALL GIT
+
+   >>>>> git config --global user.name <your-github-name>
+         git config --global user.email <your-github-email>
+
+   - LATEST, when syncing code for the first time, you will be asked for password and login
+     To authenticate, log in, and Windows will automatically remember the password so it won't be asked next time
+
+   - IF YOU WANT TO REMOVE GH account information, go to the search box
+     Windows, type the word Credential -> Click to select Credentials Manager ->
+                               -> select Windows Credentials to continue
+                                  Go to GitHub account -> Remove!!!
+                 [1 DEVICE 1 COMMAND!!!!!!!!!!!!!!!!!!!!!!]
+
+6. COMMAND GROUP 2 - COMMAND GROUP USE ONLY 1 TIME FOR 1 LOCAL PROJECT
+                 ONLY TYPE ONCE WITH 1 NEWLY CREATED PROJECT
+                 IF YOU CREATE A NEW PROJECT, YOU MUST TYPE IT AGAIN
+                 
+                 [1 PROJECT THIS 1 COMMAND!!!!!!!!!!!!!!!!!!!!!!!!!]
+
+    >>>>> git init
+
+                 IT IS REQUIRED TO STAND IN THE PROJECT FOLDER TO TYPE COMMANDS
+                 HEY, BECAUSE IF YOU STAND IN THE WRONG PLACE, UPLOAD/SYNCHRONIZE RIGHT THE WRONG PLACE!!!
+                 THE SYSTEM WILL SELF-CREATE A HIDDEN FOLDER IN THE PROJECT FOLDER
+                 NAME IS .GIT
+                 - Here, the change history of the above project is saved
+                   server and local of all developers in the project!!!
+                   DELETION AND EDITING IS ABSOLUTELY PROHIBITED HERE - SEE OKIE
+         
+7. COMMAND GROUP 3 - COMMAND GROUP FOR THE FIRST TIME SYNCHRONIZING CODE TO THE SERVER
+               - THIS GROUP OF COMMANDS CAN ONLY BE USED ONCE FOR 1 PROJECT
+                 (LEADER FIRST PUTTING PROJECT ON SERVER, OR PERSONALLY
+                         FIRST TIME PUTTING PROJECT ON SERVER)
+               - MUST BE IN THE PROJECT FOLDER
+
+               [1 PROJECT THIS 1 COMMAND PHRASE!!!!!!!!!!]
+
+  >>>>> git add . (Remember there are 3 types of add
+                    git add . This command will upload the project to the server
+                              and it always gives any file marked with . at the top
+                              name.
+                              Because my project has a .gitignore file, I have to use it
+                              With this command, the ignore file will be uploaded to the server
+                              when my team friend downloaded the code to build the machine
+                              it, then it has this ignore file available
+                              It doesn't upload trash to the server, just like me
+                            
+                    git add * is the most commonly used, but it doesn't bother to include anyone
+                              name with accent . top
+
+                    git add UserDAO.java
+
+       git commit -m "briefly write the reason for changing the code here!!!"
+                      //"ahihi" when going to practice, GET BEAT!!!
+                      The reason will go to the server, it can't be fixed!!!
+   
+        git branch -M main //tell GH that, locally, the project is coding
+                             //I'm called main (in the past it was master)
+
+        git remote add origin https://github.com/to-name-repository-code
+                             //notify GH that the code repository on the server was created
+                             //called origin
+
+        git push -U origin main //put code from main to origin
+                                 //code is officially synchronized
+
+        YOU WILL BE ASKED FOR PASSWORD/LOGIN FOR THE FIRST TIME DOING SYNCHRONIZATION
+        THEN WINDOWS REMEMBERS ACCOUNT!!!
+
+8. LEGENDARY COMMAND GROUP - USE DAILY TO SYNC CODE
+
+       >>>>> git add *
+             git commit -m "write briefly the reason for editing the code"
+             git push
+
+9. TEAMWORK COMMAND GROUP, DOWNLOAD CODE
+    - A FRIEND/SOMEBODY WANT TO GET SOURCE, TAKE THOY, NOT UPLOADED TO SERVER
+      - Give the code repository URL for it to download
+            https://github.com/your-gh-name/repository-name.git
+      - give the URL to download and be ready to edit the code and synchronize - team
+     
+    >>>>> git clone server-repository-name (https://...)
+      ON YOUR COMPUTER, YOU HAVE THE WHOLE PROJECT INCLUDING: SOURCE, .GIT, .gitignore, README.md
+
+    - Go to GH Web, go to the configuration repository/invite your friend to edit the code!!!
+
+10. COMMAND GROUP FOR HANDLING Clashes and Conflicts CODE - CONFLICT
+    - git pull //sync server to local first
+    - then re-upload your code later!!!
+ 
+
+   
+  
+
+  
+
+
+
+
+
+  
+ 
+                   
+  
+ 
+
+
